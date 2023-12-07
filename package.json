@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "install": "forge install && forge remappings > remappings.txt ",
+    "remappings": "forge remappings > remappings.txt && sed -i '' 's|ds-test/=lib/forge-std/lib/ds-test/src/|ds-test/=node_modules/ds-test/|; s|forge-std/=lib/forge-std/src/|forge-std/=node_modules/forge-std/|' remappings.txt",
+    "build": "forge build && yarn wagmi generate"
+  },
+  "devDependencies": {
+    "@wagmi/cli": "^1.5.2"
+  },
+  "dependencies": {
+    "@defi-wonderland/smock-foundry": "^1.0.2"
+  }
+}
